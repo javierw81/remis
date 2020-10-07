@@ -1,202 +1,186 @@
 *{
-    box-sizing: border-box;
-    margin:0;
-    padding:0;
+box-sizing: border-box;
+margin:0;
+padding:0;
 }
     
 body{
-    background: rgb(23, 23, 117);
-    color:white;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='24' viewBox='0 0 88 24'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='autumn' fill='%239c9951' fill-opacity='0.4'%3E%3Cpath d='M10 0l30 15 2 1V2.18A10 10 0 0 0 41.76 0H39.7a8 8 0 0 1 .3 2.18v10.58L14.47 0H10zm31.76 24a10 10 0 0 0-5.29-6.76L4 1 2 0v13.82a10 10 0 0 0 5.53 8.94L10 24h4.47l-6.05-3.02A8 8 0 0 1 4 13.82V3.24l31.58 15.78A8 8 0 0 1 39.7 24h2.06zM78 24l2.47-1.24A10 10 0 0 0 86 13.82V0l-2 1-32.47 16.24A10 10 0 0 0 46.24 24h2.06a8 8 0 0 1 4.12-4.98L84 3.24v10.58a8 8 0 0 1-4.42 7.16L73.53 24H78zm0-24L48 15l-2 1V2.18A10 10 0 0 1 46.24 0h2.06a8 8 0 0 0-.3 2.18v10.58L73.53 0H78z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    font-size: 16px;
-    font-family: 'Oswald', sans-serif;
-    
+background: rgb(23, 23, 117);
+color:white;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='24' viewBox='0 0 88 24'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='autumn' fill='%239c9951' fill-opacity='0.4'%3E%3Cpath d='M10 0l30 15 2 1V2.18A10 10 0 0 0 41.76 0H39.7a8 8 0 0 1 .3 2.18v10.58L14.47 0H10zm31.76 24a10 10 0 0 0-5.29-6.76L4 1 2 0v13.82a10 10 0 0 0 5.53 8.94L10 24h4.47l-6.05-3.02A8 8 0 0 1 4 13.82V3.24l31.58 15.78A8 8 0 0 1 39.7 24h2.06zM78 24l2.47-1.24A10 10 0 0 0 86 13.82V0l-2 1-32.47 16.24A10 10 0 0 0 46.24 24h2.06a8 8 0 0 1 4.12-4.98L84 3.24v10.58a8 8 0 0 1-4.42 7.16L73.53 24H78zm0-24L48 15l-2 1V2.18A10 10 0 0 1 46.24 0h2.06a8 8 0 0 0-.3 2.18v10.58L73.53 0H78z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+font-size: 16px;
+font-family: 'Oswald', sans-serif; 
 }
 
 a{
-    text-decoration: none;
-    color:white;
+text-decoration: none;
+color:white;
 }
 
 ul{
-    list-style: none;
+list-style: none;
 }    
 
 .container{
-    margin:auto;
-    width: 90%;
+margin:auto;
+width: 90%;
 }
 
 .nav-main{
-    font-size: 17px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding:20px 0px;
-    height:60px;
-    
-
+font-size: 17px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding:20px 0px;
+height:60px;
 }
 
 .logo {
-     width: 75px;
-     
-     
+width: 75px;
 }
 
 .titulo{
-    margin-left: 20px;
-    margin-right: 50px;
+margin-left: 20px;
+margin-right: 50px;
 }
 
 .nav-main ul{
-    display: flex;
+display: flex;
 }
 
 .nav-main ul li{
-    padding: 15px;
-
+padding: 15px;
 }
 
 .nav-main ul li a {
-    padding: 5px;
+padding: 5px;
 }
 
 .nav-main ul li a:hover{
-    border-bottom: 2px solid white;
+border-bottom: 2px solid white;
 }
 
 .nav-main ul.nav-menu {
-    flex: 1;    
-    margin-left: 20px;
+flex: 1;    
+margin-left: 20px;
 }
 
 section{
-    width: 100%;
-    height:550px;
-    background-image:url("./imagen/peluche.jpeg");
-    background-repeat:no-repeat;
-    justify-content: center;
-    background-size: cover;
-    background-position: center;
-    margin: 10px 10px;
-       
+width: 100%;
+height:550px;
+background-image:url("./imagen/peluche.jpeg");
+background-repeat:no-repeat;
+justify-content: center;
+background-size: cover;
+background-position: center;
+margin: 10px 10px;      
 }
 
 .botonlogin{
-    
-    font-size: 20px;
-    color:white;
-    background: black;
-    padding:10px 10px;
+font-size: 20px;
+color:white;
+background: black;
+padding:10px 10px;
 }
 
 footer{
-    background: black;
-    color:white;
+background: black;
+color:white;
 }
 
-/*Aca empieza css pagina crear usuario*/
+/*Aca empieza css pagina crear modificar o ver usuario*/
 .btn-crear1{
-    background-color: green;
-    padding:10px 10px;
-    border-bottom: black solid 1px;
-    font-size: 14px;
+background-color: green;
+padding:10px 10px;
+border-bottom: black solid 1px;
+font-size: 14px;
 }
-
 
 .btn-crear2{
-    background-color:red;
-    padding:10px 10px;
-    border-bottom: black solid 1px;
-    font-size: 14px;
+background-color:red;
+padding:10px 10px;
+border-bottom: black solid 1px;
+font-size: 14px;
 }
 
 li {
-    display:inline-block;
-    font-size: 14px;
-    padding: 10px;
-    margin:10px
+display:inline-block;
+font-size: 14px;
+padding: 10px;
+margin:10px
 }
+
 h2{
-    margin: 10px 20px;
-    text-decoration: underline;
+margin: 10px 20px;
+text-decoration: underline;
 }
 
 #asunto{
-    margin:15px;
-    
-        
+margin:15px;        
 }
 
-
 .form-control{
-    margin: 10px;
-    font-family: 'Oswald';
-    font-size: 20px;
+margin: 10px;
+font-family: 'Oswald';
+font-size: 20px;
 }
 
 .back{
-    background-color: blue;
-    padding:10px 10px;
-    border-bottom: black solid 1px;
-    font-size: 14px;
-    margin:10px;
-
+background-color: blue;
+padding:10px 10px;
+border-bottom: black solid 1px;
+font-size: 14px;
+margin:10px;
 }
 /*css lista */
-
 th{
-    color:rgb(11, 11, 68)
+color:rgb(11, 11, 68)
 }
 
 .btn-view{
-    background-color: blue;
-    font-size: 16px;
+background-color: blue;
+font-size: 16px;
 }
 
 .btn-update{
-    background-color: rgb(209, 209, 40);
-    font-size: 16px;
+background-color: rgb(209, 209, 40);
+font-size: 16px;
 }
+
 .btn-delete{
-    background-color: red;
-    font-size: 16px;
+background-color: red;
+font-size: 16px;
 }
 
 table{
-    border: 1px solid black;
-    table-layout: auto;
-    width: 90%;
-    margin-right: 10%;
-    margin-left: 5%;
-    letter-spacing: 1px;
-    border-collapse: collapse;
-    margin-bottom: 5%;
- 
-    
-    }
+border: 1px solid black;
+table-layout: auto;
+width: 90%;
+margin-right: 10%;
+margin-left: 5%;
+letter-spacing: 1px;
+border-collapse: collapse;
+margin-bottom: 5%;    
+}
 
 caption{
-        font-size: 20px;
-        font-weight: bolder;
-        margin: 15px;
-        caption-side: top;
-     }
+font-size: 20px;
+font-weight: bolder;
+margin: 15px;
+caption-side: top;
+}
 
- th{
-     margin: 10px;
-     padding: 10px;
-     font-size: 20px ;
-     text-align: center;
-     text-shadow: 1px 1px 1px rgb(216, 18, 34);
-     border: 1px solid black;
- 
-    }
+th{
+margin: 10px;
+padding: 10px;
+font-size: 20px ;
+text-align: center;
+text-shadow: 1px 1px 1px rgb(216, 18, 34);
+border: 1px solid black;
+}
 
-
- td{
-     text-align: center;
-     font-size:20px ;
-     border: 1px solid black;
-    }
+td{
+text-align: center;
+font-size:20px ;
+border: 1px solid black;
+}
