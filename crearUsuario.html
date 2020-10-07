@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IWCorp.</title>
+
+
+ <link rel= "stylesheet" href="style.css"/>
+ <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+<div class="container">
+        
+    <nav class="nav-main">
+
+        <img class="logo" src="imagen/3.jpg"  alt="ivan logo">
+ 
+ 
+    <div class="titulo">
+        <h1>LITTLE APPLE CORP.</h1>
+        <h3> by CEO Ivan Wamba</h3> 
+
+    </div> 
+
+    <ul class="nav-menu">
+                <li> 
+                    <a href="#">Home</a>
+                </li>
+               
+                <li>
+                    <a href="#">User</a>
+                </li>
+                <li>
+                    <a href="#">Others</a>
+                </li>
+                <li>
+                    <a href="#">Quit</a>
+                </li>
+                
+    </ul>
+        
+   <ul class="nav-menu-right">
+                <li>
+                     <a href="#">
+                <i class="fas fa-search"></i>
+                    </a>
+                </li>    
+    </ul>
+    </nav>    
+<hr> 
+<div>           
+    <form action="/mail.php" method="GET">        
+             <h2>Registration</h2>
+             <fieldset>
+                 <legend>
+                     <div class="form-control">
+                         <label for="name">Name</label> 
+                         <input type="text" id="name" name="name" required placeholder="ingresesu nombre"></input>
+                         <abbr tittle= "required" arial-label="required">*</abbr>
+                     </div>    
+                     <div class="form-control">
+                         <label for="surname">Surname</label> 
+                         <input type="text" id="surname" name="surname"  required placeholder="ingrese su apellido"></input>
+                         <abbr tittle= "required" arial-label="required">*</abbr>
+ 
+                     </div>    
+                     <div class="form-control">
+                        <label for="edad">Years</label> 
+                        <input type="number" id="edad" name="edad"  required ></input>
+                        <abbr tittle= "required" arial-label="required">*</abbr>
+                    </div>
+
+                     <div class="form-control">
+                         <label for="mail">Mail</label> 
+                         <input type="mail" id="mail" name="mail"  required placeholder="ingrese su mail"></input>
+                         <abbr tittle= "required" arial-label="required">*</abbr>
+ 
+                     </div>   
+
+                  
+                    <div class="form-control">
+                        <p>Marital Status</p>
+                        <ul>
+                            <li>                        
+                            <label for="estadocivil">Single</label> 
+                            <input type="radio" id="estadocivil" name="estadocivil" ></input>
+                            </li>
+
+                            <li>                        
+                            <label for="estadocivil">Married</label> 
+                            <input type="radio" id="estadocivil" name="estadocivil"  ></input>
+                            </li>
+
+                            <li>                        
+                            <label for="estadocivil">Separated</label> 
+                            <input type="radio" id="estadocivil" name="estadocivil" ></input>
+                            </li>
+                            
+                            <li>                        
+                            <label for="estadocivil">Widower</label> 
+                            <input type="radio" id="estadocivil" name="estadocivil" ></input>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                     <div class="form-control">
+                            <p>Subject</p>
+                            <textarea name="asunto" id="asunto" cols="40" rows="5"></textarea>
+                           
+                    </div>
+                 </legend>      
+             </fieldset>
+                         
+                         <button type="submit"  id="save" name="save" class="btn-crear1">Save</button>
+                         <button type="button"  id="save" name="save" class="btn-crear2">Cancel</button>
+
+ 
+     
+            </form>
+        </div>
+    </body>
+</html>
