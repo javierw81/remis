@@ -115,4 +115,8 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
+<<<<<<< HEAD
 package-lock.json
+=======
+package-lock.json
+>>>>>>> c984fe3... server rest for example
