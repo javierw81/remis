@@ -1,0 +1,11 @@
+{
+    "name": "remis",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "start": "node serve --watch"
+    },
+    "dependencies": {
+        "serve": "^11.3.2"
+    }
+}

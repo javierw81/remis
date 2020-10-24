@@ -1,0 +1,16 @@
+node_modules
+build
+coverage
+.vscode
+.DS_STORE
+.env
+tmp
+yarn.lock
+database/development.sqlite
+*.log
+*.testing
+.idea
+.nyc_output
+package-lock.json
+documentation
+.npmrc
