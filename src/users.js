@@ -13,7 +13,13 @@ const getList = () => {
                     const tdName = createTd(obj.name)
                     //<td>javier</td>
                     const tdSurname = createTd(obj.surname)
-                    //<td>wamba</td>
+                    //<td>wamba</td>                    
+                    const tdAddress = createTd(obj.address)                    
+                    const tdCity = createTd(obj.city)
+
+
+
+
 
                     const tdAction = createTd()
                     const btnDetail = createButton("Detail", "btn-view")
@@ -48,6 +54,10 @@ const getList = () => {
                         <td>wamba</td> 
                     </tr>    
                     */
+                   tr.appendChild(tdAddress)
+                   tr.appendChild(tdCity)
+
+
                     tr.appendChild(tdAction)
 
                     table.appendChild(tr)
