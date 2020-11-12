@@ -1,4 +1,18 @@
 
+const deleteThis = (id) => {
+    if (confirm("are you sure?")) {
+
+
+        fetch(`${api.user.default}/${id}`, {
+            method: 'DELETE',
+        })
+            .then(response => response.json())
+            .then(data => {
+                location.reload();
+            })
+    }
+}
+
 const getList = () => {
     fetch(api.user.list)
         .then(response => response.json())
@@ -14,17 +28,22 @@ const getList = () => {
                     //<td>javier</td>
                     const tdSurname = createTd(obj.surname)
                     //<td>wamba</td>                    
-                    const tdAddress = createTd(obj.address)                    
+                    const tdAddress = createTd(obj.address)
                     const tdCity = createTd(obj.city)
 
-
-
-
-
                     const tdAction = createTd()
-                    const btnDetail = createButton("Detail", "btn-view")
-                    const btnUpdate = createButton("Update", "btn-update")
-                    const btnDelete = createButton("Delete", "btn-delete")
+                    const btnDetail = createButton("Detail", "btn-view", () => {
+                        const id = obj.id
+                        window.location.href = `/views/users/detail?id=${id}`
+                    })
+                    const btnUpdate = createButton("Update", "btn-update", () => {
+                        const id = obj.id
+                        window.location.href = `/views/users/update?id=${id}`
+                    })
+                    const btnDelete = createButton("Delete", "btn-delete", () => {
+                        const id = obj.id
+                        deleteThis(id)
+                    })
 
                     tdAction.appendChild(btnDetail)
                     tdAction.appendChild(btnUpdate)
@@ -54,8 +73,8 @@ const getList = () => {
                         <td>wamba</td> 
                     </tr>    
                     */
-                   tr.appendChild(tdAddress)
-                   tr.appendChild(tdCity)
+                    tr.appendChild(tdAddress)
+                    tr.appendChild(tdCity)
 
 
                     tr.appendChild(tdAction)
