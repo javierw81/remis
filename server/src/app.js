@@ -101,9 +101,6 @@ app.listen(port, async () => {
 
   users = new Db(storage, "users")
 
-  await users.init()
-
-
   clients = new Db(storage, "clients")
 
   await clients.init()
@@ -125,13 +122,13 @@ app.listen(port, async () => {
 
   if (!clients.getAll().length) {
     clients.create({
-      bussinessname: "Arativa",
+      businessName: "Arativa",
       cuit: "30-56895623-2",
       address: "perdernera 2556",
       city: "Lanus"
     })
     clients.create({
-      bussinessname: "Javier Alfredo",
+      businessName: "Javier Alfredo",
       cuit: "30-12345678-2",
       address: "allende 18",
       city: "Quilmes"
