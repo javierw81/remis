@@ -125,13 +125,13 @@ app.listen(port, async () => {
 
   if (!clients.getAll().length) {
     clients.create({
-      businessName: "Arativa",
+      bussinessname: "Arativa",
       cuit: "30-56895623-2",
       address: "perdernera 2556",
       city: "Lanus"
     })
     clients.create({
-      businessName: "Javier Alfredo",
+      bussinessname: "Javier Alfredo",
       cuit: "30-12345678-2",
       address: "allende 18",
       city: "Quilmes"

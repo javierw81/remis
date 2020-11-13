@@ -6,3 +6,10 @@ var api = {
         default: `${this.apiBaseUrl}/user`
     }
 }
+
+var api = {    
+    clients : {
+        list:`${this.apiBaseUrl}/clients`,
+        default: `${this.apiBaseUrl}/clients`
+    }
+}

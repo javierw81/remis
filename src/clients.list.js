@@ -3,7 +3,7 @@ const deleteThis = (id) => {
     if (confirm("are you sure?")) {
 
 
-        fetch(`${api.user.default}/${id}`, {
+        fetch(`${api.clients.default}/${id}`, {
             method: 'DELETE',
         })
             .then(response => response.json())
@@ -14,19 +14,19 @@ const deleteThis = (id) => {
 }
 
 const getList = () => {
-    fetch(api.users.list)
+    fetch(api.clients.list)
         .then(response => response.json())
         .then(data => {
-            const table = document.getElementById('users_table').tBodies[0]
+            const table = document.getElementById('clients_table').tBodies[0]
             data.forEach(
                 (obj, idx) => {
                     const tr = createTr()
                     //<tr></tr>
                     const tdId = createTd(obj.id)
                     //<td>123123</td>
-                    const tdName = createTd(obj.name)
+                    const tdbussinessname = createTd(obj.bussinessname)
                     //<td>javier</td>
-                    const tdSurname = createTd(obj.surname)
+                    const tdcuit = createTd(obj.cuit)
                     //<td>wamba</td>                    
                     const tdAddress = createTd(obj.address)
                     const tdCity = createTd(obj.city)
@@ -34,11 +34,11 @@ const getList = () => {
                     const tdAction = createTd()
                     const btnDetail = createButton("Detail", "btn-view", () => {
                         const id = obj.id
-                        window.location.href = `/views/users/detail?id=${id}`
+                        window.location.href = `/views/clients/detail?id=${id}`
                     })
                     const btnUpdate = createButton("Update", "btn-update", () => {
                         const id = obj.id
-                        window.location.href = `/views/users/update?id=${id}`
+                        window.location.href = `/views/clients/update?id=${id}`
                     })
                     const btnDelete = createButton("Delete", "btn-delete", () => {
                         const id = obj.id
@@ -57,7 +57,7 @@ const getList = () => {
                     <td>javier</td>
                     <td>wamba</td>          
                     */
-                    tr.appendChild(tdName)
+                    tr.appendChild(tdbussinessname)
                     /*
                    <tr>
                        <td>123123</td>
@@ -65,7 +65,7 @@ const getList = () => {
                    </tr>                   
                    <td>wamba</td>          
                    */
-                    tr.appendChild(tdSurname)
+                    tr.appendChild(tdcuit)
                     /*
                     <tr>
                         <td>123123</td>
