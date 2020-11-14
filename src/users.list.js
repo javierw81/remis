@@ -14,7 +14,7 @@ const deleteThis = (id) => {
 }
 
 const getList = () => {
-    fetch(api.users.list)
+    fetch(api.user.list)
         .then(response => response.json())
         .then(data => {
             const table = document.getElementById('users_table').tBodies[0]

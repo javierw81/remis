@@ -3,7 +3,7 @@ const deleteThis = (id) => {
     if (confirm("are you sure?")) {
 
 
-        fetch(`${api.clients.default}/${id}`, {
+        fetch(`${api.client.default}/${id}`, {
             method: 'DELETE',
         })
             .then(response => response.json())
@@ -14,7 +14,7 @@ const deleteThis = (id) => {
 }
 
 const getList = () => {
-    fetch(api.clients.list)
+    fetch(api.client.list)
         .then(response => response.json())
         .then(data => {
             const table = document.getElementById('clients_table').tBodies[0]
@@ -24,7 +24,7 @@ const getList = () => {
                     //<tr></tr>
                     const tdId = createTd(obj.id)
                     //<td>123123</td>
-                    const tdbussinessname = createTd(obj.bussinessname)
+                    const tdbusinessName = createTd(obj.businessName)
                     //<td>javier</td>
                     const tdcuit = createTd(obj.cuit)
                     //<td>wamba</td>                    
@@ -57,7 +57,7 @@ const getList = () => {
                     <td>javier</td>
                     <td>wamba</td>          
                     */
-                    tr.appendChild(tdbussinessname)
+                    tr.appendChild(tdbusinessName)
                     /*
                    <tr>
                        <td>123123</td>

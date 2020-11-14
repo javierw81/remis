@@ -4,12 +4,11 @@ var api = {
     user : {
         list:`${this.apiBaseUrl}/users`,
         default: `${this.apiBaseUrl}/user`
-    }
-}
+    },
 
-var api = {    
-    clients : {
+   
+    client : {
         list:`${this.apiBaseUrl}/clients`,
-        default: `${this.apiBaseUrl}/clients`
+        default: `${this.apiBaseUrl}/client`
     }
 }
