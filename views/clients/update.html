@@ -7,6 +7,7 @@
     <title>IWCorp.</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" />
+    <link rel="icon"  href="/imagen/favicon.jpg" />
 
     <link rel="stylesheet" href="/style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">
@@ -23,12 +24,13 @@
 
         <hr>
         <div>
-            <form action="/mail.php" method="GET">
+            <form id='clientForm' action="" method="PUT">
+
+            
                 <h2>Update Registration</h2>
 
                 <div class="form-control">
-                    <label for="id">ID</label><br>
-                    <input type="text" id="id" name="id"></input>
+                 <input type="hidden" id="id" name="id"></input>
                 </div>
                 <div class="form-control">
                     <label for="businessName">BusinessName</label><br>
@@ -49,11 +51,9 @@
                     <input type="text" id="city" name="city"></input>
 
                 </div>
-
-                <button type="button" id="save" name="save" class="btn-crear1">Save</button>
-                <button type="button" id="save" name="save" class="btn-crear2">Cancel</button>
-
-
+                <button type="submit" id="save" name="save" class="btn-crear1">Save</button>
+                <button type="button" id="cancel" name="cancel" class="btn-crear2">Cancel</button>
+                
 
             </form>
             <footer>
