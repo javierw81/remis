@@ -12,6 +12,7 @@ app.use(bodyParser.json());
 const port = 3000
 let users
 let clients
+let drivers
 
 app.get('/', (req, res) => {
   const ret = {
@@ -95,6 +96,42 @@ app.post('/client', (req, res) => {
     res.json(client)
   })
 
+/* ---------------CLIENTS---------------------- */
+app.get('/drivers', (req, res) => {
+  const ret = drivers.getAll()
+
+  res.json(ret);
+})
+
+app.post('/driver', (req, res) => {
+  const driver = req.body
+
+  drivers.create(driver)
+
+  res.json(driver)
+})
+  .put('/driver/:id', (req, res) => {
+    const id = parseInt(req.params.id)
+    const driver = req.body
+
+    drivers.update(id, driver)
+
+    res.json(client)
+  })
+  .delete('/driver/:id', (req, res) => {
+    const id = parseInt(req.params.id)
+
+    drivers.delete(id)
+
+    res.json({ id })
+  })
+  .get('/driver/:id', (req, res) => {
+    const id = parseInt(req.params.id)
+    const driver = drivers.getOne(id)
+
+    res.json(driver)
+  })
+
 /* ---------------APP START---------------------- */
 app.listen(port, async () => {
   await storage.init()
@@ -103,7 +140,7 @@ app.listen(port, async () => {
 
   clients = new Db(storage, "clients")
 
-  await clients.init()
+  drivers = new Db(storage, "drivers")
 
   if (!users.getAll().length) {
     users.create({
@@ -132,6 +169,29 @@ app.listen(port, async () => {
       cuit: "30-12345678-2",
       address: "allende 18",
       city: "Quilmes"
+    })
+  }
+
+  if (!drivers.getAll().length) {
+    drivers.create({
+      name: "Alberto Alfredo",
+      surname: "Gomez",
+      address: "Aguilar 2556",
+      city: "Banfield",
+      licenceNumber: "78955555",
+      licenceClass: "A",
+      car: "Volksvagen Gol",
+      carLicencePlate: "ASE 345"
+    })
+    drivers.create({
+      name: "Facundo Augusto",
+      surname: "Cabral",
+      address: "9 de julio 122)",
+      city: "CABA",
+      licenceNumber: "455343543",
+      licenceClass: "B",
+      car: "Ford KA",
+      carLicencePlate: "RRT 367"
     })
   }
 
