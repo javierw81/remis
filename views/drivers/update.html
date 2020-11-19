@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IWCorp.</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" />
+    <link rel="icon"  href="/imagen/favicon.jpg" />
+
+    <link rel="stylesheet" href="/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">
+    <!--css  font roboto-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div id="navigator"></div>
+
+
+        <hr>
+        <div>
+            <form id='driverForm' action="" method="PUT">
+
+            
+                <h2>Update Registration</h2>
+
+                <div class="form-control">
+                 <input type="hidden" id="id" name="id"></input>
+                </div>
+                <div class="form-control">
+                    <label for="name">Name</label><br>
+                    <input type="text" id="name" name="name"></input>
+                </div>
+                <div class="form-control">
+                    <label for="surname">Surname</label><br>
+                    <input type="text" id="surname" name="surname"></input>
+                </div>
+                <div class="form-control">
+                    <label for="address">Address</label><br>
+                    <input type="text" id="address" name="address"></input>
+
+                </div>
+
+                <div class="form-control">
+                    <label for="city">City</label><br>
+                    <input type="text" id="city" name="city"></input>
+
+                </div>
+
+                <div class="form-control">
+                    <label for="licenceNumber">LicenceNumber</label><br>
+                    <input type="text" id="licenceNumber" name="licenceNumber"></input>
+
+                </div> <div class="form-control">
+                    <label for="licenceClass">LicenceClass</label><br>
+                    <input type="text" id="licenceClass" name="licenceClass"></input>
+
+                </div> <div class="form-control">
+                    <label for="car">Car</label><br>
+                    <input type="text" id="car" name="car"></input>
+                </div>
+                
+                <div class="form-control">
+                    <label for="carLicencePlate">Car Licence Plate</label><br>
+                    <input type="text" id="carLicencePlate" name="carLicencePlate"></input>
+
+                </div>
+
+                <button type="submit" id="save" name="save" class="btn-crear1">Save</button>
+                <button type="button" id="cancel" name="cancel" class="btn-crear2">Cancel</button>
+                
+
+            </form>
+            <footer>
+                <div id="footer">
+
+            </footer>
+
+
+            <script src="../../app.js"></script>
+            <script src="../../src/common.js"></script>
+            <script src="../../src/components.js"></script>
+            <script src="../../src/drivers.update.js"></script>
+
+        </div>
+
+</body>
+
+</html>
