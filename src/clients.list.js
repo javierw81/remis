@@ -1,4 +1,3 @@
-
 const deleteThis = (id) => {
     if (confirm("are you sure?")) {
 
@@ -84,5 +83,8 @@ const getList = () => {
             )
         })
 }
-
+const newButton = document.getElementById('create')
+newButton.onclick = () => {
+window.location.href = `/views/clients/create`
+}
 getList()
