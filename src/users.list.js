@@ -83,6 +83,9 @@ const getList = () => {
                 }
             )
         })
+    }
+const newButton = document.getElementById('create')
+newButton.onclick = () => {
+window.location.href = `/views/users/create`
 }
-
 getList()
