@@ -229,3 +229,13 @@ color: red;
 font-size: 12px;
 text-align: center;
 }
+
+.detail-input
+{
+    border: 1px black solid;
+    width: fit-content;
+    padding: 5px;
+    background-color: #FFF;
+    color: #000;
+    font-weight: 700;
+}

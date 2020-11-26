@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IWCorp.</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" />
+    <link rel="icon"  href="/imagen/favicon.jpg" />
 
     <link rel="stylesheet" href="/style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">
@@ -22,69 +23,34 @@
         <div id="navigator"></div>
 
         <hr>
+
         <div>
-            <form action="/mail.php" method="GET">
+            <form id='userCreateForm' action="" method="POST">
                 <h2>Registration</h2>
 
                 <div class="form-control">
                     <label for="name">Name</label><br>
-                    <input type="text" id="name" name="name" required placeholder="ingresesu nombre"></input>
-                    <abbr tittle="required" arial-label="required">*</abbr>
+                    <input type="text" id="name" name="name" required ></input>
                 </div>
                 <div class="form-control">
                     <label for="surname">Surname</label><br>
-                    <input type="text" id="surname" name="surname" required placeholder="ingrese su apellido"></input>
-                    <abbr tittle="required" arial-label="required">*</abbr>
+                    <input type="text" id="surname" name="surname" required ></input>
 
                 </div>
                 <div class="form-control">
-                    <label for="edad">Years</label><br>
-                    <input type="number" id="edad" name="edad" required></input>
-                    <abbr tittle="required" arial-label="required">*</abbr>
+                    <label for="address">Address</label><br>
+                    <input type="text" id="ddress" name="address" required></input>
                 </div>
 
                 <div class="form-control">
-                    <label for="mail">Mail</label> <br>
-                    <input type="mail" id="mail" name="mail" required placeholder="ingrese su mail"></input>
-                    <abbr tittle="required" arial-label="required">*</abbr>
-
-                </div>
-
-
-                <div class="form-control">
-                    <p>Marital Status</p>
-                    <ul>
-                        <li>
-                            <label for="estadocivil">Single</label>
-                            <input type="radio" id="estadocivil" name="estadocivil"></input>
-                        </li>
-
-                        <li>
-                            <label for="estadocivil">Married</label>
-                            <input type="radio" id="estadocivil" name="estadocivil"></input>
-                        </li>
-
-                        <li>
-                            <label for="estadocivil">Separated</label>
-                            <input type="radio" id="estadocivil" name="estadocivil"></input>
-                        </li>
-
-                        <li>
-                            <label for="estadocivil">Widower</label>
-                            <input type="radio" id="estadocivil" name="estadocivil"></input>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="form-control">
-                    <p>Subject</p>
-                    <textarea name="asunto" id="asunto" cols="45" rows="10"></textarea>
+                    <label for="city">City</label> <br>
+                    <input type="text" id="city" name="city" required ></input>
 
                 </div>
 
 
                 <button type="submit" id="save" name="save" class="btn-crear1">Save</button>
-                <button type="button" id="save" name="save" class="btn-crear2">Cancel</button>
+                <button type="button" id="cancel" name="cancel" class="btn-crear2">Cancel</button>
 
 
 
@@ -94,9 +60,10 @@
                 <div id="footer">
 
             </footer>
-
-            <script src="app.js"></script>
-
+            <script src="../../app.js"></script>
+            <script src="../../src/common.js"></script>
+            <script src="../../src/components.js"></script>
+            <script src="../../src/users.create.js"></script>
         </div>
 
 </body>
