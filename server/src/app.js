@@ -96,7 +96,7 @@ app.post('/client', (req, res) => {
     res.json(client)
   })
 
-/* ---------------CLIENTS---------------------- */
+/* ---------------DRIVERS---------------------- */
 app.get('/drivers', (req, res) => {
   const ret = drivers.getAll()
 
@@ -116,7 +116,7 @@ app.post('/driver', (req, res) => {
 
     drivers.update(id, driver)
 
-    res.json(client)
+    res.json(driver)
   })
   .delete('/driver/:id', (req, res) => {
     const id = parseInt(req.params.id)
