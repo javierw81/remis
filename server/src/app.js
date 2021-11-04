@@ -2,6 +2,8 @@ const express = require("express");
 const bodyParser = require('body-parser');
 const storage = require('node-persist');
 const Db = require('./Db.js');
+const turf = require('@turf/turf')
+
 const app = express();
 var cors = require('cors')
 
@@ -131,6 +133,67 @@ app.post('/driver', (req, res) => {
 
     res.json(driver)
   })
+
+
+
+/* ---------------COUNTRIES---------------------- */
+app.get('/countries', (req, res) => {
+  const ret = countries.getAll()
+
+  res.json(ret);
+})
+  .get('/country/:id', (req, res) => {
+    const id = parseInt(req.params.id)
+    const country = countries.getOne(id)
+
+    res.json(country)
+  })
+
+/* ---------------CITIES---------------------- */
+app.get('/cities', (req, res) => {
+  const ret = cities.getAll()
+
+  res.json(ret);
+})
+  .get('/city/:id', (req, res) => {
+    const id = parseInt(req.params.id)
+    const city = cities.getOne(id)
+
+    res.json(city)
+  })
+
+app.get('/geo/intercept/check', (req, res) => {
+  const coords = [
+    [-87.80425648022474, 40.22673274307446],
+    [-87.76998450983932, 40.22623852556582],
+    [-87.7699768997222, 40.22623813348474],
+    [-87.73714100408094, 40.18278144411566],
+    [-87.80425648022474, 40.22673274307446]
+  ]
+  const coords1 = [
+    [-589221, 104522],
+    [-589021, 104526],
+    [-589021, 104526],
+    [-588830, 104857],
+    [-589221, 104522]
+  ]
+
+  const coords2 = [
+    [-87.8231621, 40.2300045],
+    [-87.8219604, 40.1967081],
+    [-87.7915764, 40.1900206],
+    [-87.7632523, 40.1978881],
+    [-87.7644539, 40.2313151],
+    [-87.7915764, 40.1900206],
+    [-87.8229904, 40.2302666],
+    [-87.8231621, 40.2300045]]
+
+  const polygon = turf.polygon([coords2])
+  const intercepts = turf.kinks(polygon)
+
+  res.json(intercepts)
+})
+
 
 /* ---------------APP START---------------------- */
 app.listen(port, async () => {

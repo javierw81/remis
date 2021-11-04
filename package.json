@@ -3,9 +3,10 @@
     "version": "0.0.0",
     "private": true,
     "scripts": {
-        "start": "node serve --watch"
+        "start": "serve"
     },
     "dependencies": {
-        "serve": "^11.3.2"
+        "serve": "^11.3.2",
+        "toasty": "^6.0.3"
     }
 }
